@@ -158,6 +158,20 @@ some parts of code can't be parsed with it.
 code behaviour - sometimes space classificator can make a mistake
 and drop space between two identificators (can be fixed)
 
+## Trained classificators
+Classificators trained on Linux kernel: https://www.dropbox.com/s/ucyo19143xqy8g9/linux_classificators.data?dl=0
 
+## Settings
+config.py contains some interesting settings:
+* tags_newline, tags_space, tags_tab - contain a list of features,
+on which classificators train.
+* parent_count - count of parent nodes which will be used as features.
+* categorial_features - list of categorial features.
+* balance - is we balance train/test sets.
+* print_prediction_for_* - print predictions for each object or not. Sometimes it is usefull.
+* print_ast - print AST of files after parsing.
+* debug_mode - debug mode. Now unused I believe.
+* files2process - how many files to process. If not set use
+up to 1000000 files to train on. If set then use no more than that number.
 
 
